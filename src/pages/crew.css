@@ -1,0 +1,114 @@
+.crew-Container {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	height: 100vh;
+}
+.crewSection {
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.crewTopContainer img {
+	margin: 10px auto;
+	height: 250px;
+}
+@media only screen and (max-device-width: 767px) {
+	.crew-Container {
+		background-image: url("../starter-code/assets/crew/background-crew-mobile.jpg");
+	}
+	.crewTopContainer img {
+		height: 250px;
+	}
+	.balls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		width: 50%;
+		margin: 20px auto;
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.crew-Container {
+		background-image: url("../starter-code/assets/crew/background-crew-tablet.jpg");
+	}
+	.balls {
+		width: 20%;
+	}
+
+	.crewTopContainer {
+		order: 0;
+	}
+	.balls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		width: 50%;
+		margin: 20px auto;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	.crew-Container {
+		background-image: url("../starter-code/assets/crew/background-crew-desktop.jpg");
+	}
+	.crewSection {
+		flex-direction: row;
+	}
+	.crewTopContainer,
+	.crewBottomContainer {
+		flex: 1;
+	}
+	.crewTopContainer {
+		order: 1;
+	}
+	.crewTopContainer img {
+		height: 450px;
+	}
+	.crewBottomContainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.section-CrewDetails {
+		width: 70%;
+		text-align: left;
+		margin: 0px 200px;
+		line-height: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+	.balls {
+		order: 1;
+		margin: 0px auto;
+		display: flex;
+		text-align: left;
+		width: 100%;
+	}
+	.balls .ball {
+		margin: 0px;
+	}
+}
+
+.balls .ball {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	/* background-color: white; */
+	border: 1px solid white;
+	margin: 0px 10px;
+	cursor: pointer;
+}
+.active {
+	background-color: white;
+}
+.crewDetails {
+	margin: 20px 0px;
+	padding: 20px;
+}
+.crewDetails h4 {
+	text-transform: uppercase;
+}

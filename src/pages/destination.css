@@ -1,0 +1,113 @@
+.destination-Container {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+.topDestinationContainer img {
+	width: 60%;
+}
+
+.sectionDestination-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	padding: 15px;
+	color: white;
+}
+.topDestinationContainer,
+.bottomDestination-Container {
+	margin: 10px 0px;
+}
+
+.name-list ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 70px 15px;
+}
+.name-list ul li {
+	display: inline-flex;
+	cursor: pointer;
+	font-family: "Old Standard TT", serif;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.active-destination::after {
+	content: "";
+	position: absolute;
+	background-color: #ccc;
+	height: 3px;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+	width: 100%;
+}
+h1 {
+	font-family: "Old Standard TT", serif;
+	/* font-weight: 700; */
+	font-size: 25px;
+	margin: 10px 0px;
+	text-transform: uppercase;
+	color: white;
+}
+.distance {
+	border-top: 1px solid #ccc;
+	margin: 25px 0px;
+}
+.distance p {
+	margin: 15px 0px;
+	text-transform: uppercase;
+}
+@media only screen and (max-device-width: 767px) {
+	.destination-Container {
+		background-image: url("../starter-code/assets/destination/background-destination-mobile.jpg");
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.destination-Container {
+		background-image: url("../starter-code/assets/destination/background-destination-tablet.jpg");
+	}
+	.name-list ul {
+		margin: 30px 15px;
+	}
+	.topDestinationContainer img {
+		width: 70%;
+	}
+	.bottomDestination-Container {
+		width: 70%;
+	}
+	.distance {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	.destination-Container {
+		background-image: url("../starter-code/assets/destination/background-destination-desktop.jpg");
+	}
+	.sectionDestination-center {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.sectionDestination-center .topDestinationContainer,
+	.sectionDestination-center .bottomDestination-Container {
+		flex: 1;
+	}
+	.bottomDestination-Container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.bottomDestination-Container .destinationContents {
+		width: 70%;
+	}
+	.distance {
+		display: flex;
+		justify-content: space-between;
+	}
+}

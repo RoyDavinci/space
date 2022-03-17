@@ -1,0 +1,90 @@
+.homeMain-Container {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+.homeMain-Container section,
+.homeMain-Container article {
+	padding: 10px;
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+.homeMain-Container section h1 {
+	font-family: "Old Standard TT", serif;
+	/* font-weight: 700; */
+	font-size: 90px;
+	margin: 10px 0px;
+}
+.homeMain-Container section h2 {
+	font-family: "Economica", sans-serif;
+	text-transform: uppercase;
+	font-size: 35px;
+}
+.homeMain-Container section h3 {
+	font-family: "Economica", sans-serif;
+}
+
+.homeMain-Container article .explore {
+	padding: 20px;
+	width: 250px;
+	height: 250px;
+	background-color: white;
+	border-radius: 50%;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: "Economica", sans-serif;
+}
+@media only screen and (max-device-width: 767px) {
+	.homeMain-Container article {
+		margin: 60px 0px;
+	}
+	.homeMain-Container {
+		background-image: url("../starter-code//assets/home/background-home-mobile.jpg");
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.homeMain-Container {
+		background-image: url("../starter-code//assets/home/background-home-desktop.jpg");
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 60vh;
+	}
+	.content section,
+	.content article {
+		flex: 1;
+	}
+	.content section .section-content {
+		width: 60%;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	.homeMain-Container {
+		background-image: url("../starter-code//assets/home/background-home-desktop.jpg");
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 85vh;
+	}
+	.content section,
+	.content article {
+		flex: 1;
+	}
+	.content section .section-content {
+		width: 60%;
+	}
+}

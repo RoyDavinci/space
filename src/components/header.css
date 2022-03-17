@@ -1,0 +1,90 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+header .logo .logo-image {
+	background-color: white;
+	border-radius: 50%;
+	padding: 2px;
+}
+header .logo .logo-menu {
+	cursor: pointer;
+}
+header .links {
+	background-color: #1a1b26;
+	padding: 20px;
+}
+header .links li:not(:first-child) {
+	display: inline-flex;
+	margin: 0px 15px;
+	padding: 0 10px;
+	position: relative;
+}
+header .links a {
+	color: white;
+}
+header .links li::after {
+	content: "";
+	position: absolute;
+	background-color: #ccc;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+header .links li:hover:after {
+	width: 100%;
+}
+header .links li:active:after {
+	width: 100%;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	header .logo .logo-menu,
+	.close {
+		display: none;
+	}
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+	header .logo .logo-menu,
+	.close {
+		display: none;
+	}
+}
+@media only screen and (max-device-width: 767px) {
+	header {
+		position: relative;
+	}
+	header .links {
+		position: absolute;
+		top: 0;
+		width: 60%;
+		background-color: #1f2431;
+		color: white;
+		right: 0;
+		height: 100vh;
+		font-size: 20px;
+		line-height: 3rem;
+		padding: 15px;
+		font-family: "Economica", sans-serif;
+	}
+	.show {
+		display: block;
+	}
+	.hide {
+		display: none;
+	}
+	header .links .close {
+		text-align: right;
+		margin-bottom: 30px;
+	}
+}
