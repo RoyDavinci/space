@@ -10,42 +10,44 @@ const Header = () => {
 
 	return (
 		<header>
-			<div className='logo'>
-				<img src={Logo} alt='' className='logo-image' />
-				<img
-					src={Menu}
-					alt=''
-					className='logo-menu'
-					onClick={() => setShow(!show)}
-				/>
+			<div className='container'>
+				<div className='logo'>
+					<img src={Logo} alt='' className='logo-image' />
+					<img
+						src={Menu}
+						alt=''
+						className='logo-menu'
+						onClick={() => setShow(!show)}
+					/>
+				</div>
+				<ul className={show ? "links show" : "links hide"}>
+					<li className='close' onClick={() => setShow(!show)}>
+						<img src={Close} alt='' />
+					</li>
+					<li>
+						<Link to='/'>
+							{" "}
+							<strong>00</strong> Home
+						</Link>
+					</li>
+					<li>
+						<Link to='/destination'>
+							<strong>01</strong> Destination
+						</Link>
+					</li>
+					<li>
+						<Link to='/crew'>
+							{" "}
+							<strong>02</strong> Crew
+						</Link>
+					</li>
+					<li>
+						<Link to='/technology'>
+							<strong>03</strong> Technology
+						</Link>
+					</li>
+				</ul>
 			</div>
-			<ul className={show ? "links show" : "links hide"}>
-				<li className='close' onClick={() => setShow(!show)}>
-					<img src={Close} alt='' />
-				</li>
-				<li>
-					<Link to='/'>
-						{" "}
-						<strong>00</strong> Home
-					</Link>
-				</li>
-				<li>
-					<Link to='/destination'>
-						<strong>01</strong> Destination
-					</Link>
-				</li>
-				<li>
-					<Link to='/crew'>
-						{" "}
-						<strong>02</strong> Crew
-					</Link>
-				</li>
-				<li>
-					<Link to='/technology'>
-						<strong>03</strong> Technology
-					</Link>
-				</li>
-			</ul>
 		</header>
 	);
 };

@@ -1,37 +1,36 @@
-header {
+.container {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 }
 
-header .logo {
+.container .logo {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
 }
-header .logo .logo-image {
+.container .logo .logo-image {
 	background-color: white;
 	border-radius: 50%;
+	display: block;
 	padding: 2px;
 }
-header .logo .logo-menu {
+.container .logo .logo-menu {
 	cursor: pointer;
 }
-header .links {
+.container .links {
 	background-color: #1a1b26;
 	padding: 20px;
 }
-header .links li:not(:first-child) {
-	display: inline-flex;
+.container .links li:not(:first-child) {
 	margin: 0px 15px;
 	padding: 0 10px;
 	position: relative;
 }
-header .links a {
+.container .links a {
 	color: white;
 }
-header .links li::after {
+.container .links li::after {
 	content: "";
 	position: absolute;
 	background-color: #ccc;
@@ -41,30 +40,36 @@ header .links li::after {
 	bottom: -10px;
 	transition: 0.3s;
 }
-header .links li:hover:after {
+.container .links li:hover:after {
 	width: 100%;
 }
-header .links li:active:after {
+.container .links li:active:after {
 	width: 100%;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	header .logo .logo-menu,
+	.container .logo .logo-menu,
 	.close {
 		display: none;
+	}
+	.container .links li:not(:first-child) {
+		display: inline-flex;
 	}
 }
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-	header .logo .logo-menu,
+	.container .logo .logo-menu,
 	.close {
 		display: none;
 	}
+	.container .links li:not(:first-child) {
+		display: inline-flex;
+	}
 }
 @media only screen and (max-device-width: 767px) {
-	header {
+	.container {
 		position: relative;
 	}
-	header .links {
+	.container .links {
 		position: absolute;
 		top: 0;
 		width: 60%;
@@ -77,14 +82,21 @@ header .links li:active:after {
 		padding: 15px;
 		font-family: "Economica", sans-serif;
 	}
+	.container .links li {
+		display: block;
+		text-align: left;
+	}
 	.show {
 		display: block;
 	}
 	.hide {
 		display: none;
 	}
-	header .links .close {
+	.container .links .close {
 		text-align: right;
 		margin-bottom: 30px;
+	}
+	.container .logo {
+		width: 100%;
 	}
 }
